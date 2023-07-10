@@ -14,13 +14,27 @@
 			<th>이름</th>
 			<th>이메일</th>
 			<th>나이</th>
+			<th>나이초과</th>
+			<th>25살/30살확인</th>
 		</tr>
 		<tr th:each="memberDto, status:${memberDtos}">
+			<!--
 			<td th:text="${status.index}+1">1</td>
+			-->
+			<td th:if="${status.even}" th:text="짝수">짝수</td>
+			<td th:unless="${status.even}" th:text="홀수">홀수</td>
 			<td th:text="${memberDto.id}">tiger</td>
 			<td th:text="${memberDto.name}">홍길동</td>
 			<td th:text="${memberDto.email}">tiger@abc.com</td>
 			<td th:text="${memberDto.age}">21</td>
+			<td th:switch="${memberDto.age}>25">
+				<span th:case="true">25세 초과</span>
+				<span th:case="false">25세 미만</span>
+			</td>
+			<td th:switch="${memberDto.age}">
+				<span th:case=25>25세!!! </span>
+				<span th:case=30>30세!!!</span>
+			</td>
 		</tr>		
 	</table>
 </body>

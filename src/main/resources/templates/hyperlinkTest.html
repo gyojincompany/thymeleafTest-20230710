@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>thymeleaf 하이퍼링크 연습</title>
+</head>
+<body>
+	<div>
+		<a href="hyperResult?id=tiger&pw=12345">html 하이퍼링크</a>		
+	</div>
+	<div>
+		<a th:href="@{hyperResult(id='tiger',pw='12345')}">thymeleaf 하이퍼링크</a>		
+	</div>
+	<div>
+		<a href="http://naver.com">html 네이버 하이퍼링크</a>		
+	</div>
+	<div>
+		<a th:href="@{http://naver.com}">thymeleaf 네이버 하이퍼링크</a>		
+	</div>
+</body>
+</html>
