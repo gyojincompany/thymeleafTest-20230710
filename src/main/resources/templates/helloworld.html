@@ -6,7 +6,9 @@
 <title>타임리프 연습</title>
 </head>
 <body>
+	<div th:replace="include/header::header"></div>	
 	<div class="sample" th:text="${text}">회원이름출력</div><br>
 	<img th:src="@{/img/test.png}">
+	<div th:replace="include/footer::footer"></div>
 </body>
 </html>
