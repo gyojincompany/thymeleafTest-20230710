@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>회원 정보</title>
+</head>
+<body>
+	<h2>회원 정보</h2>
+	<hr>
+	<div>		
+		회원아이디 : <span th:text="${memberDto.id}">회원아이디</span>
+	</div>
+	<div>		
+		회원이름 : <span th:text="${memberDto.name}">회원이름</span>
+	</div>
+	<div>		
+		회원이메일 : <span th:text="${memberDto.email}">회원이메일</span>
+	</div>
+	<div>		
+		회원나이 : <span th:text="${memberDto.age}">회원나이</span>
+	</div>
+</body>
+</html>

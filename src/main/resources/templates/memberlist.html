@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="UTF-8">
+<title>회원리스트</title>
+</head>
+<body>
+	<h2>회원 리스트</h2>
+	<hr>
+	<table border="1" cellspacing="0" cellpadding="0">
+		<tr>
+			<th>아이디</th>
+			<th>이름</th>
+			<th>이메일</th>
+			<th>나이</th>
+		</tr>
+		<tr th:each="memberDto, satatus:${memberDtos}">
+			<td th:text="${memberDto.id}">tiger</td>
+			<td th:text="${memberDto.name}">홍길동</td>
+			<td th:text="${memberDto.email}">tiger@abc.com</td>
+			<td th:text="${memberDto.age}">21</td>
+		</tr>		
+	</table>
+</body>
+</html>
